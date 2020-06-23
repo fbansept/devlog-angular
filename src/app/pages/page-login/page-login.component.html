@@ -1,0 +1,11 @@
+<h2>Page de connexion</h2>
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+    <input type="text" formControlName="pseudo">
+
+    <input type="password" formControlName="password">
+
+    <button>Login</button>
+
+</form>

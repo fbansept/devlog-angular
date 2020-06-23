@@ -1,0 +1,23 @@
+<h2>Liste utilisateur</h2>
+
+<mat-table [dataSource]="listeUtilisateur">
+    
+    <ng-container matColumnDef="action">
+        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+        <mat-cell *matCellDef="let utilisateur"> 
+            <button mat-icon-button (click)="onEditUtilisateur(utilisateur)">
+                <mat-icon>edit</mat-icon>
+            </button>
+        </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="pseudo">
+        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+        <mat-cell *matCellDef="let utilisateur"> 
+            {{utilisateur.pseudo}}
+        </mat-cell>
+    </ng-container>
+  
+    <mat-header-row *matHeaderRowDef="listeColonneAffiche"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: listeColonneAffiche;"></mat-row>
+</mat-table>

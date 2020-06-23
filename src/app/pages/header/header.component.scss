@@ -1,0 +1,16 @@
+@import "~@angular/material/theming";
+@import "../../../variables.scss";
+
+:host{
+    background-color: mat-color($primaryPalette);
+    display: block;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}

@@ -1,0 +1,10 @@
+<h1>Devlog</h1>
+
+<ul>
+    <li>
+        <a mat-button routerLink="/" routerLinkActive="active"> Accueil </a>
+    </li>
+    <li *ngIf="isAdmin()">
+        <a mat-button routerLink="/liste-utilisateur" routerLinkActive="active"> Liste des utilisateurs </a>
+    </li>
+</ul>
